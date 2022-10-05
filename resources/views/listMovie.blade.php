@@ -4,6 +4,6 @@
 
 @section('content')
 
-    <h1>benvenuti</h1>
+    <h1>lista dei film</h1>
 
 @endsection
