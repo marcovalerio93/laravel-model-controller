@@ -8,21 +8,13 @@ use App\Movie;
 class MovieController extends Controller
 {
     public function list(){
-        $movies = Movie::all();
 
-       
+        $movies = Movie::orderBy('id', 'desc')->get();
 
-        foreach($movies as $movie) {
-            echo $movie->title .' - ' . $movie->original_title .'<br>';
-            
-
-        }
-
-        die();
-
+        $movie = Movie:: find(1);
     
 
 
-        return view('listMovie');
+        return view('listMovie', compact('movies'));
     }
 }
